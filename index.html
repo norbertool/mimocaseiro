@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mimo Caseiro | Doces Artesanais em Mogi-Mirim, SP</title>
+  <meta name="description" content="Bolos, tortas, brigadeiros e docinhos artesanais feitos à mão em Mogi-Mirim, SP. Receitas de família, ingredientes selecionados e entrega pela região. Encomende pelo WhatsApp.">
+  <meta name="theme-color" content="#92400E">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Mimo Caseiro | Doces Artesanais em Mogi-Mirim, SP">
+  <meta property="og:description" content="O carinho de casa em cada mordida. Bolos, tortas, brigadeiros e kits festa artesanais.">
+  <meta property="og:locale" content="pt_BR">
+
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,600&family=Inter:wght@300;400;500;600;700&family=Caveat:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a href="#main" class="skip-link">Ir para o conteúdo principal</a>
+
+  <!-- ============ SVG SPRITE ============ -->
+  <svg style="display:none" aria-hidden="true">
+    <symbol id="icon-heart-mark" viewBox="0 0 40 40">
+      <path d="M20 34C20 34 6 25.5 6 15.8 6 10.8 9.8 7 14.4 7c2.6 0 5 1.3 5.6 3.6C20.6 8.3 23 7 25.6 7 30.2 7 34 10.8 34 15.8 34 25.5 20 34 20 34Z" fill="currentColor"/>
+      <path class="accent" d="M19.3 3.2c1.6 1.8 1.6 3.6 0 5.4-1.6-1.8-1.6-3.6 0-5.4Z"/>
+      <circle class="accent" cx="27" cy="4.5" r="1.6"/>
+      <circle class="accent" cx="13.5" cy="2.5" r="1.1"/>
+    </symbol>
+
+    <symbol id="icon-cake" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M4 21v-6.5a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2V21"/>
+      <path d="M4 21h16"/>
+      <path d="M4 17c1.4-1 2.8-1 4.2 0s2.8 1 4.2 0 2.8-1 4.2 0 2.8 1 3.4 0"/>
+      <path d="M12 12.5V8"/>
+      <path d="M12 8c1.1-1.1 1.1-2.2 0-3.3-1.1 1.1-1.1 2.2 0 3.3Z"/>
+    </symbol>
+
+    <symbol id="icon-pie" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 3a9 9 0 1 0 9 9h-9V3Z"/>
+      <path d="M12 3a9 9 0 0 1 9 9"/>
+      <circle cx="9" cy="14" r="0.7" fill="currentColor" stroke="none"/>
+      <circle cx="13.5" cy="17" r="0.7" fill="currentColor" stroke="none"/>
+      <circle cx="8.5" cy="18" r="0.7" fill="currentColor" stroke="none"/>
+    </symbol>
+
+    <symbol id="icon-candy" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="4"/>
+      <path d="M8.5 9.5 4 6"/>
+      <path d="M8.5 14.5 4 18"/>
+      <path d="M15.5 9.5 20 6"/>
+      <path d="M15.5 14.5 20 18"/>
+    </symbol>
+
+    <symbol id="icon-gift" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="3" y="8" width="18" height="4" rx="1"/>
+      <path d="M12 8v13"/>
+      <path d="M19 12v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7"/>
+      <path d="M7.5 8a2.5 2.5 0 0 1 0-5C9.5 3 12 8 12 8s2.5-5 4.5-5a2.5 2.5 0 0 1 0 5"/>
+    </symbol>
+
+    <symbol id="icon-pudding" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M5.5 8h13l-1.4 11.2a2 2 0 0 1-2 1.8H8.9a2 2 0 0 1-2-1.8L5.5 8Z"/>
+      <path d="M4.5 8c1.4-1.3 2.8-1.3 4.2 0s2.8 1.3 4.2 0 2.8-1.3 4.2 0 2.6 1.3 2.6 1.3"/>
+      <circle cx="12" cy="4" r="1" fill="currentColor" stroke="none"/>
+      <path d="M12 5v1.5"/>
+    </symbol>
+
+    <symbol id="icon-whisk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 2v9.5"/>
+      <path d="M8 5c0 3.3 1.8 5.5 4 5.5s4-2.2 4-5.5"/>
+      <path d="M6 6.2c0 4.3 2.7 7 6 7s6-2.7 6-7"/>
+      <path d="M12 11.5V19"/>
+      <path d="M9 22h6"/>
+      <path d="M12 19v3"/>
+    </symbol>
+
+    <symbol id="icon-leaf" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/>
+      <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/>
+    </symbol>
+
+    <symbol id="icon-cherry" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="8.5" cy="18.5" r="2.5"/>
+      <circle cx="16" cy="19.5" r="2.5"/>
+      <path d="M8.5 16C8.5 9 13 5 17 4"/>
+      <path d="M16 17c0-3 2-5 4-6"/>
+    </symbol>
+
+    <symbol id="icon-sparkle" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+      <path d="M12 2 14 9 21 12 14 15 12 22 10 15 3 12 10 9Z"/>
+    </symbol>
+
+    <symbol id="icon-cookie" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="9"/>
+      <circle cx="9" cy="10" r="0.8" fill="currentColor" stroke="none"/>
+      <circle cx="14.5" cy="9" r="0.8" fill="currentColor" stroke="none"/>
+      <circle cx="15" cy="14.5" r="0.8" fill="currentColor" stroke="none"/>
+      <circle cx="9.5" cy="15" r="0.8" fill="currentColor" stroke="none"/>
+    </symbol>
+
+    <symbol id="icon-star" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+      <path d="M12 2.5l2.9 6 6.6.9-4.8 4.6 1.1 6.5L12 17.3l-5.8 3.2 1.1-6.5L2.5 9.4l6.6-.9L12 2.5Z"/>
+    </symbol>
+
+    <symbol id="icon-quote" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+      <path d="M9.5 5C6 6 4 9 4 12.5 4 15 5.6 17 8 17c1.9 0 3.3-1.4 3.3-3.3 0-1.7-1.2-3-2.8-3.2.4-1.8 1.7-3.3 3.5-4L9.5 5Z"/>
+      <path d="M18.5 5c-3.5 1-5.5 4-5.5 7.5 0 2.5 1.6 4.5 4 4.5 1.9 0 3.3-1.4 3.3-3.3 0-1.7-1.2-3-2.8-3.2.4-1.8 1.7-3.3 3.5-4L18.5 5Z"/>
+    </symbol>
+
+    <symbol id="icon-whatsapp" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.347-.15-1.453-.536-2.768-1.711-1.024-.913-1.715-2.04-1.916-2.387-.198-.347-.021-.534.149-.708.149-.149.347-.397.521-.595.173-.198.198-.347.297-.594.099-.248.05-.446-.05-.595-.099-.149-.793-1.91-1.04-2.557-.247-.646-.5-.557-.673-.557-.173 0-.5.025-.747.025-.247 0-.594.099-.892.397-.297.297-1.139 1.115-1.139 2.713 0 1.6 1.139 3.16 1.298 3.36.157.198 2.13 3.27 5.123 4.476 2.992 1.207 2.992.807 3.516.756.522-.05 1.713-.7 1.954-1.397.243-.696.243-1.296.17-1.42-.07-.124-.272-.198-.57-.347z"/>
+      <path d="M12 2C6.477 2 2 6.477 2 12c0 1.86.504 3.6 1.378 5.094L2 22l5.094-1.378A9.96 9.96 0 0 0 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18.13a8.1 8.1 0 0 1-4.135-1.13l-.296-.176-3.063.83.838-3.064-.193-.314A8.126 8.126 0 1 1 20.13 12 8.14 8.14 0 0 1 12 20.13z"/>
+    </symbol>
+
+    <symbol id="icon-instagram" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="2" y="2" width="20" height="20" rx="5"/>
+      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37Z"/>
+      <circle cx="17.5" cy="6.5" r="0.6" fill="currentColor" stroke="none"/>
+    </symbol>
+
+    <symbol id="icon-facebook" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+      <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3Z"/>
+    </symbol>
+
+    <symbol id="icon-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 1 1 18 0Z"/>
+      <circle cx="12" cy="10" r="3"/>
+    </symbol>
+
+    <symbol id="icon-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="10"/>
+      <path d="M12 6v6l4 2"/>
+    </symbol>
+
+    <symbol id="icon-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="2" y="4" width="20" height="16" rx="2"/>
+      <path d="m22 7-10 5L2 7"/>
+    </symbol>
+
+    <symbol id="icon-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92Z"/>
+    </symbol>
+
+    <symbol id="icon-chevron-down" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="m6 9 6 6 6-6"/>
+    </symbol>
+
+    <symbol id="icon-chevron-left" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="m15 18-6-6 6-6"/>
+    </symbol>
+
+    <symbol id="icon-chevron-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="m9 18 6-6-6-6"/>
+    </symbol>
+
+    <symbol id="icon-arrow-up" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 19V5"/>
+      <path d="m5 12 7-7 7 7"/>
+    </symbol>
+  </svg>
+
+  <!-- ============ HEADER ============ -->
+  <header class="navbar" id="navbar">
+    <div class="container">
+      <a href="#inicio" class="brand">
+        <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true"><use href="#icon-heart-mark"/></svg>
+        Mimo Caseiro
+      </a>
+
+      <nav class="nav-links" id="navLinks" aria-label="Navegação principal">
+        <a href="#inicio">Início</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#cardapio">Cardápio</a>
+        <a href="#galeria">Galeria</a>
+        <a href="#depoimentos">Depoimentos</a>
+        <a href="#contato">Contato</a>
+        <div class="nav-cta">
+          <a href="https://wa.me/5519998765432?text=Ol%C3%A1%2C%20Mimo%20Caseiro!%20Gostaria%20de%20fazer%20um%20pedido." class="btn btn-whatsapp btn-sm" target="_blank" rel="noopener">
+            <svg class="icon"><use href="#icon-whatsapp"/></svg>
+            Fazer Pedido
+          </a>
+        </div>
+      </nav>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="inicio">
+      <div class="float-shape float-shape--1" aria-hidden="true"><svg class="icon"><use href="#icon-leaf"/></svg></div>
+      <div class="float-shape float-shape--2" aria-hidden="true"><svg class="icon"><use href="#icon-cookie"/></svg></div>
+      <div class="float-shape float-shape--3" aria-hidden="true"><svg class="icon"><use href="#icon-sparkle"/></svg></div>
+      <div class="float-shape float-shape--4" aria-hidden="true"><svg class="icon"><use href="#icon-cherry"/></svg></div>
+      <div class="float-shape float-shape--5" aria-hidden="true"><svg class="icon"><use href="#icon-candy"/></svg></div>
+
+      <div class="container">
+        <span class="hero-eyebrow" data-reveal="fade">
+          <svg class="icon"><use href="#icon-sparkle"/></svg>
+          Doces Artesanais · Mogi-Mirim, SP
+        </span>
+
+        <h1 data-reveal="fade" style="--reveal-delay: 80ms">
+          Mimo Caseiro
+          <span class="line2">feito com amor</span>
+        </h1>
+
+        <p class="hero-tagline" data-reveal="fade" style="--reveal-delay: 160ms">"O carinho de casa em cada mordida"</p>
+
+        <p class="hero-lead" data-reveal="fade" style="--reveal-delay: 240ms">
+          Bolos, tortas, brigadeiros e docinhos preparados à mão, todos os dias, com receitas de família,
+          ingredientes selecionados e muito carinho — direto para a sua mesa em Mogi-Mirim e região.
+        </p>
+
+        <div class="hero-actions" data-reveal="fade" style="--reveal-delay: 320ms">
+          <a href="#cardapio" class="btn btn-primary">Ver Cardápio</a>
+          <a href="https://wa.me/5519998765432?text=Ol%C3%A1%2C%20Mimo%20Caseiro!%20Gostaria%20de%20fazer%20um%20pedido." class="btn btn-outline" target="_blank" rel="noopener">
+            <svg class="icon"><use href="#icon-whatsapp"/></svg>
+            Pedir pelo WhatsApp
+          </a>
+        </div>
+      </div>
+
+      <a href="#sobre" class="hero-scroll" aria-label="Rolar para a seção Sobre">
+        Role para descobrir
+        <svg class="icon"><use href="#icon-chevron-down"/></svg>
+      </a>
+    </section>
+
+    <!-- ============ SOBRE ============ -->
+    <section class="section" id="sobre">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-visual" data-reveal="scale">
+            <svg class="icon"><use href="#icon-whisk"/></svg>
+            <div class="about-badge">
+              <svg class="icon"><use href="#icon-sparkle"/></svg>
+              <div>
+                <strong>100% Artesanal</strong>
+                <span>Feito à mão, todos os dias</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-content">
+            <span class="eyebrow" data-reveal="fade">Nossa História</span>
+            <h2 data-reveal="fade" style="--reveal-delay: 80ms">Tradição de família, feita com amor todos os dias</h2>
+            <p data-reveal="fade" style="--reveal-delay: 160ms">
+              A Mimo Caseiro nasceu na cozinha de Dona Lurdes, em Mogi-Mirim, onde os bolos de fubá e os
+              brigadeiros sempre foram o destaque de qualquer festa de família. O que começou como receitas
+              guardadas a sete chaves se transformou em uma confeitaria artesanal apaixonada por adoçar momentos
+              especiais.
+            </p>
+            <p data-reveal="fade" style="--reveal-delay: 240ms">
+              Hoje, cada doce que sai do nosso forno carrega o mesmo cuidado de sempre: ingredientes frescos,
+              técnicas artesanais e uma boa dose de carinho. Seja para o café da tarde ou para a festa mais
+              importante do ano, temos o mimo certo para você.
+            </p>
+
+            <div class="stats-grid">
+              <div class="stat-card" data-reveal="fade" style="--reveal-delay: 80ms">
+                <div class="stat-number"><span data-counter="10">0</span>+</div>
+                <div class="stat-label">Anos de Tradição</div>
+              </div>
+              <div class="stat-card" data-reveal="fade" style="--reveal-delay: 160ms">
+                <div class="stat-number"><span data-counter="1200">0</span>+</div>
+                <div class="stat-label">Clientes Satisfeitos</div>
+              </div>
+              <div class="stat-card" data-reveal="fade" style="--reveal-delay: 240ms">
+                <div class="stat-number"><span data-counter="50">0</span>+</div>
+                <div class="stat-label">Receitas Exclusivas</div>
+              </div>
+              <div class="stat-card" data-reveal="fade" style="--reveal-delay: 320ms">
+                <div class="stat-number"><span data-counter="4.9" data-decimal="1">0</span></div>
+                <div class="stat-label">Avaliação Média</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CARDÁPIO ============ -->
+    <section class="section section--alt" id="cardapio">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow" data-reveal="fade">Cardápio</span>
+          <h2 data-reveal="fade">Nossos Doces</h2>
+          <p data-reveal="fade">Cada receita é preparada em pequenos lotes, no dia da entrega, para garantir frescor e sabor incomparáveis.</p>
+        </div>
+
+        <div class="menu-filters" data-reveal="fade">
+          <button class="filter-btn is-active" data-filter="all">Todos</button>
+          <button class="filter-btn" data-filter="bolos">Bolos</button>
+          <button class="filter-btn" data-filter="tortas">Tortas</button>
+          <button class="filter-btn" data-filter="docinhos">Docinhos &amp; Brigadeiros</button>
+          <button class="filter-btn" data-filter="kits">Kits Festa</button>
+          <button class="filter-btn" data-filter="sobremesas">Sobremesas</button>
+        </div>
+
+        <div class="menu-grid">
+          <!-- Bolos -->
+          <article class="menu-card" data-category="bolos" data-reveal="fade" style="--reveal-delay: 0ms">
+            <div class="card-media card-media--bolos"><svg class="icon"><use href="#icon-cake"/></svg></div>
+            <div class="card-body">
+              <h3>Bolo de Fubá Cremoso</h3>
+              <p>Receita tradicional da casa, com casquinha dourada e miolo cremoso.</p>
+              <div class="card-footer">
+                <span class="card-price">R$ 45<small>,00</small></span>
+                <a class="card-order" data-product="Bolo de Fubá Cremoso" target="_blank" rel="noopener"><svg class="icon"><use href="#icon-whatsapp"/></svg>Pedir</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card" data-category="bolos" data-reveal="fade" style="--reveal-delay: 60ms">
+            <div class="card-media card-media--bolos"><svg class="icon"><use href="#icon-cake"/></svg></div>
+            <div class="card-body">
+              <h3>Bolo de Cenoura com Chocolate</h3>
+              <p>Massa fofinha de cenoura coberta com ganache de chocolate meio amargo.</p>
+              <div class="card-footer">
+                <span class="card-price">R$ 48<small>,00</small></span>
+                <a class="card-order" data-product="Bolo de Cenoura com Chocolate" target="_blank" rel="noopener"><svg class="icon"><use href="#icon-whatsapp"/></svg>Pedir</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card" data-category="bolos" data-reveal="fade" style="--reveal-delay: 120ms">
+            <div class="card-media card-media--bolos"><svg class="icon"><use href="#icon-cake"/></svg></div>
+            <div class="card-body">
+              <h3>Bolo Red Velvet</h3>
+              <p>Massa aveludada com recheio e cobertura de cream cheese.</p>
+              <div class="card-footer">
+                <span class="card-price">R$ 68<small>,00</small></span>
+                <a class="card-order" data-product="Bolo Red Velvet" target="_blank" rel="noopener"><svg class="icon"><use href="#icon-whatsapp"/></svg>Pedir</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card" data-category="bolos" data-reveal="fade" style="--reveal-delay: 180ms">
+            <div class="card-media card-media--bolos"><svg class="icon"><use href="#icon-cake"/></svg></div>
+            <div class="card-body">
+              <h3>Bolo de Laranja com Calda</h3>
+              <p>Leve, fofinho e perfumado, finalizado com calda cítrica.</p>
+              <div class="card-footer">
+                <span class="card-price">R$ 42<small>,00</small></span>
+                <a class="card-order" data-product="Bolo de Laranja com Calda" target="_blank" rel="noopener"><svg class="icon"><use href="#icon-whatsapp"/></svg>Pedir</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Tortas -->
+          <article class="menu-card" data-category="tortas" data-reveal="fade" style="--reveal-delay: 0ms">
+            <div class="card-media card-media--tortas"><svg class="icon"><use href="#icon-pie"/></svg></div>
+            <div class="card-body">
+              <h3>Torta de Limão</h3>
+              <p>Base crocante, creme de limão fresquinho e merengue maçaricado.</p>
+              <div class="card-footer">
+                <span class="card-price">R$ 58<small>,00</small></span>
+                <a class="card-order" data-product="Torta de Limão" target="_blank" rel="noopener"><svg class="icon"><use href="#icon-whatsapp"/></svg>Pedir</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card" data-category="tortas" data-reveal="fade" style="--reveal-delay: 60ms">
+            <div class="card-media card-media--tortas"><svg class="icon"><use href="#icon-pie"/></svg></div>
+            <div class="card-body">
+              <h3>Torta Holandesa</h3>
+              <p>Camadas de biscoito, creme e chocolate belga.</p>
+              <div class="card-footer">
+                <span class="card-price">R$ 62<small>,00</small></span>
+                <a class="card-order" data-product="Torta Holandesa" target="_blank" rel="noopener"><svg class="icon"><use href="#icon-whatsapp"/></svg>Pedir</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card" data-category="tortas" data-reveal="fade" style="--reveal-delay: 120ms">
+            <div class="card-media card-media--tortas"><svg class="icon"><use href="#icon-pie"/></svg></div>
+            <div class="card-body">
+              <h3>Torta de Morango com Chantilly</h3>
+              <p>Morangos selecionados e chantilly batido na hora.</p>
+              <div class="card-footer">
+                <span class="card-price">R$ 60<small>,00</small></span>
+                <a class="card-order" data-product="Torta de Morango com Chantilly" target="_blank" rel="noopener"><svg class="icon"><use href="#icon-whatsapp"/></svg>Pedir</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Docinhos & Brigadeiros -->
+          <article class="menu-card" data-category="docinhos" data-reveal="fade" style="--reveal-delay: 0ms">
+            <div class="card-media card-media--docinhos"><svg class="icon"><use href="#icon-candy"/></svg></div>
+            <div class="card-body">
+              <h3>Brigadeiro Tradicional</h3>
+              <p>O clássico de sempre, enrolado um a um e finalizado com chocolate granulado.</p>
+              <div class="card-footer">
+                <span class="card-price">R$ 2<small>,80 / un.</small></span>
+                <a class="card-order" data-product="Brigadeiro Tradicional" target="_blank" rel="noopener"><svg class="icon"><use href="#icon-whatsapp"/></svg>Pedir</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card" data-category="docinhos" data-reveal="fade" style="--reveal-delay: 60ms">
+            <div class="card-media card-media--docinhos"><svg class="icon"><use href="#icon-candy"/></svg></div>
+            <div class="card-body">
+              <h3>Brigadeiro de Pistache</h3>
+              <p>Recheio cremoso com pistache importado e finalização especial.</p>
+              <div class="card-footer">
+                <span class="card-price">R$ 4<small>,00 / un.</small></span>
+                <a class="card-order" data-product="Brigadeiro de Pistache" target="_blank" rel="noopener"><svg class="icon"><use href="#icon-whatsapp"/></svg>Pedir</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card" data-category="docinhos" data-reveal="fade" style="--reveal-delay: 120ms">
+            <div class="card-media card-media--docinhos"><svg class="icon"><use href="#icon-candy"/></svg></div>
+            <div class="card-body">
+              <h3>Beijinho de Coco</h3>
+              <p>Coco fresquinho com toque de leite condensado e um docinho de cravo.</p>
+              <div class="card-footer">
+                <span class="card-price">R$ 2<small>,80 / un.</small></span>
+                <a class="card-order" data-product="Beijinho de Coco" target="_blank" rel="noopener"><svg class="icon"><use href="#icon-whatsapp"/></svg>Pedir</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card" data-category="docinhos" data-reveal="fade" style="--reveal-delay: 180ms">
+            <div class="card-media card-media--docinhos"><svg class="icon"><use href="#icon-candy"/></svg></div>
+            <div class="card-body">
+              <h3>Ninho com Nutella</h3>
+              <p>Leite Ninho cremoso com coração derretido de Nutella.</p>
+              <div class="card-footer">
+                <span class="card-price">R$ 4<small>,00 / un.</small></span>
+                <a class="card-order" data-product="Ninho com Nutella" target="_blank" rel="noopener"><svg class="icon"><use href="#icon-whatsapp"/></svg>Pedir</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Kits Festa -->
+          <article class="menu-card" data-category="kits" data-reveal="fade" style="--reveal-delay: 0ms">
+            <div class="card-media card-media--kits"><svg class="icon"><use href="#icon-gift"/></svg></div>
+            <div class="card-body">
+              <h3>Kit Festa Pequeno</h3>
+              <p>30 docinhos variados em caixa personalizada — perfeito para comemorações intimistas.</p>
+              <div class="card-footer">
+                <span class="card-price">R$ 89<small>,00</small></span>
+                <a class="card-order" data-product="Kit Festa Pequeno" target="_blank" rel="noopener"><svg class="icon"><use href="#icon-whatsapp"/></svg>Pedir</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card" data-category="kits" data-reveal="fade" style="--reveal-delay: 60ms">
+            <div class="card-media card-media--kits"><svg class="icon"><use href="#icon-gift"/></svg></div>
+            <div class="card-body">
+              <h3>Kit Festa Médio</h3>
+              <p>50 docinhos variados + mini bolo decorado para o aniversariante.</p>
+              <div class="card-footer">
+                <span class="card-price">R$ 149<small>,00</small></span>
+                <a class="card-order" data-product="Kit Festa Médio" target="_blank" rel="noopener"><svg class="icon"><use href="#icon-whatsapp"/></svg>Pedir</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card" data-category="kits" data-reveal="fade" style="--reveal-delay: 120ms">
+            <div class="card-media card-media--kits"><svg class="icon"><use href="#icon-gift"/></svg></div>
+            <div class="card-body">
+              <h3>Kit Festa Premium</h3>
+              <p>100 docinhos, bolo decorado e mesa de doces completa para a sua festa.</p>
+              <div class="card-footer">
+                <span class="card-price">R$ 280<small>,00</small></span>
+                <a class="card-order" data-product="Kit Festa Premium" target="_blank" rel="noopener"><svg class="icon"><use href="#icon-whatsapp"/></svg>Pedir</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Sobremesas -->
+          <article class="menu-card" data-category="sobremesas" data-reveal="fade" style="--reveal-delay: 0ms">
+            <div class="card-media card-media--sobremesas"><svg class="icon"><use href="#icon-pudding"/></svg></div>
+            <div class="card-body">
+              <h3>Pudim de Leite Condensado</h3>
+              <p>Receita clássica, cremoso e com calda de caramelo na medida certa.</p>
+              <div class="card-footer">
+                <span class="card-price">R$ 38<small>,00</small></span>
+                <a class="card-order" data-product="Pudim de Leite Condensado" target="_blank" rel="noopener"><svg class="icon"><use href="#icon-whatsapp"/></svg>Pedir</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="menu-card" data-category="sobremesas" data-reveal="fade" style="--reveal-delay: 60ms">
+            <div class="card-media card-media--sobremesas"><svg class="icon"><use href="#icon-pudding"/></svg></div>
+            <div class="card-body">
+              <h3>Cheesecake de Frutas Vermelhas</h3>
+              <p>Base amanteigada, recheio cremoso e calda artesanal de frutas vermelhas.</p>
+              <div class="card-footer">
+                <span class="card-price">R$ 55<small>,00</small></span>
+                <a class="card-order" data-product="Cheesecake de Frutas Vermelhas" target="_blank" rel="noopener"><svg class="icon"><use href="#icon-whatsapp"/></svg>Pedir</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ GALERIA ============ -->
+    <section class="section" id="galeria">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow" data-reveal="fade">Galeria</span>
+          <h2 data-reveal="fade">Um Gostinho do Nosso Ateliê</h2>
+          <p data-reveal="fade">Cada doce é uma pequena obra de arte — confira um pouco do que preparamos com tanto carinho para nossos clientes.</p>
+        </div>
+
+        <div class="gallery-grid">
+          <div class="gallery-item gallery-item--large" data-reveal="scale" style="--reveal-delay: 0ms">
+            <svg class="icon"><use href="#icon-cake"/></svg>
+            <span class="gallery-caption">Bolos Personalizados</span>
+          </div>
+          <div class="gallery-item" data-reveal="scale" style="--reveal-delay: 60ms">
+            <svg class="icon"><use href="#icon-candy"/></svg>
+            <span class="gallery-caption">Docinhos para Festa</span>
+          </div>
+          <div class="gallery-item" data-reveal="scale" style="--reveal-delay: 120ms">
+            <svg class="icon"><use href="#icon-pie"/></svg>
+            <span class="gallery-caption">Tortas Artesanais</span>
+          </div>
+          <div class="gallery-item gallery-item--large" data-reveal="scale" style="--reveal-delay: 180ms">
+            <svg class="icon"><use href="#icon-gift"/></svg>
+            <span class="gallery-caption">Kits para Eventos</span>
+          </div>
+          <div class="gallery-item" data-reveal="scale" style="--reveal-delay: 240ms">
+            <svg class="icon"><use href="#icon-pudding"/></svg>
+            <span class="gallery-caption">Sobremesas Especiais</span>
+          </div>
+          <div class="gallery-item" data-reveal="scale" style="--reveal-delay: 300ms">
+            <svg class="icon"><use href="#icon-sparkle"/></svg>
+            <span class="gallery-caption">Embalagens &amp; Acabamento</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ DEPOIMENTOS ============ -->
+    <section class="section" id="depoimentos">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow" data-reveal="fade">Depoimentos</span>
+          <h2 data-reveal="fade">Quem Provou, Aprovou</h2>
+          <p data-reveal="fade">A satisfação de quem já encomendou é o nosso maior orgulho.</p>
+        </div>
+
+        <div class="testimonials" data-reveal="scale">
+          <div class="testimonial-track">
+            <div class="testimonial-slides" id="testimonialSlides">
+              <div class="testimonial-slide">
+                <svg class="icon icon--quote"><use href="#icon-quote"/></svg>
+                <div class="testimonial-stars">
+                  <svg class="icon"><use href="#icon-star"/></svg>
+                  <svg class="icon"><use href="#icon-star"/></svg>
+                  <svg class="icon"><use href="#icon-star"/></svg>
+                  <svg class="icon"><use href="#icon-star"/></svg>
+                  <svg class="icon"><use href="#icon-star"/></svg>
+                </div>
+                <p class="testimonial-quote">"Os docinhos fizeram toda a diferença na festa da minha filha! Todo mundo elogiou e perguntou onde eu comprei."</p>
+                <div class="testimonial-author">
+                  <strong>Fernanda Almeida</strong>
+                  <span>Mogi-Mirim, SP</span>
+                </div>
+              </div>
+
+              <div class="testimonial-slide">
+                <svg class="icon icon--quote"><use href="#icon-quote"/></svg>
+                <div class="testimonial-stars">
+                  <svg class="icon"><use href="#icon-star"/></svg>
+                  <svg class="icon"><use href="#icon-star"/></svg>
+                  <svg class="icon"><use href="#icon-star"/></svg>
+                  <svg class="icon"><use href="#icon-star"/></svg>
+                  <svg class="icon"><use href="#icon-star"/></svg>
+                </div>
+                <p class="testimonial-quote">"O bolo de cenoura é simplesmente perfeito, igual ao que a minha avó fazia. Virei cliente fiel!"</p>
+                <div class="testimonial-author">
+                  <strong>Carlos Eduardo</strong>
+                  <span>Mogi-Mirim, SP</span>
+                </div>
+              </div>
+
+              <div class="testimonial-slide">
+                <svg class="icon icon--quote"><use href="#icon-quote"/></svg>
+                <div class="testimonial-stars">
+                  <svg class="icon"><use href="#icon-star"/></svg>
+                  <svg class="icon"><use href="#icon-star"/></svg>
+                  <svg class="icon"><use href="#icon-star"/></svg>
+                  <svg class="icon"><use href="#icon-star"/></svg>
+                  <svg class="icon"><use href="#icon-star"/></svg>
+                </div>
+                <p class="testimonial-quote">"Atendimento maravilhoso, entrega rápida e docinhos deliciosos. Recomendo de olhos fechados!"</p>
+                <div class="testimonial-author">
+                  <strong>Juliana Pereira</strong>
+                  <span>Itapira, SP</span>
+                </div>
+              </div>
+
+              <div class="testimonial-slide">
+                <svg class="icon icon--quote"><use href="#icon-quote"/></svg>
+                <div class="testimonial-stars">
+                  <svg class="icon"><use href="#icon-star"/></svg>
+                  <svg class="icon"><use href="#icon-star"/></svg>
+                  <svg class="icon"><use href="#icon-star"/></svg>
+                  <svg class="icon"><use href="#icon-star"/></svg>
+                  <svg class="icon"><use href="#icon-star"/></svg>
+                </div>
+                <p class="testimonial-quote">"Pedimos o Kit Festa Premium para o evento da empresa e foi um sucesso absoluto. Qualidade impecável!"</p>
+                <div class="testimonial-author">
+                  <strong>Roberto Lima</strong>
+                  <span>Mogi-Guaçu, SP</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-controls">
+            <button class="testimonial-arrow" id="testimonialPrev" aria-label="Depoimento anterior">
+              <svg class="icon"><use href="#icon-chevron-left"/></svg>
+            </button>
+            <div class="testimonial-dots" id="testimonialDots">
+              <button class="is-active" aria-label="Ir para depoimento 1"></button>
+              <button aria-label="Ir para depoimento 2"></button>
+              <button aria-label="Ir para depoimento 3"></button>
+              <button aria-label="Ir para depoimento 4"></button>
+            </div>
+            <button class="testimonial-arrow" id="testimonialNext" aria-label="Próximo depoimento">
+              <svg class="icon"><use href="#icon-chevron-right"/></svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTATO ============ -->
+    <section class="section section--alt" id="contato">
+      <div class="container">
+        <div class="section-header">
+          <span class="eyebrow" data-reveal="fade">Contato</span>
+          <h2 data-reveal="fade">Venha Nos Visitar ou Faça Seu Pedido</h2>
+          <p data-reveal="fade">Estamos sempre por aqui para adoçar o seu dia. Fale com a gente!</p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-info" data-reveal="fade">
+            <div class="contact-item">
+              <div class="contact-icon">
+                <svg class="icon"><use href="#icon-pin"/></svg>
+              </div>
+              <div class="contact-text">
+                <h3>Endereço</h3>
+                <p>Rua das Flores, 245 – Jardim Aeroporto<br>Mogi-Mirim – SP, CEP 13.800-000</p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">
+                <svg class="icon"><use href="#icon-phone"/></svg>
+              </div>
+              <div class="contact-text">
+                <h3>Telefone / WhatsApp</h3>
+                <p><a href="https://wa.me/5519998765432">(19) 99876-5432</a></p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">
+                <svg class="icon"><use href="#icon-mail"/></svg>
+              </div>
+              <div class="contact-text">
+                <h3>E-mail</h3>
+                <p><a href="mailto:contato@mimocaseiro.com.br">contato@mimocaseiro.com.br</a></p>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-icon">
+                <svg class="icon"><use href="#icon-clock"/></svg>
+              </div>
+              <div class="contact-text">
+                <h3>Horário de Funcionamento</h3>
+                <table class="hours-table">
+                  <tbody>
+                    <tr><td>Terça a Sexta</td><td>9h às 18h</td></tr>
+                    <tr><td>Sábado</td><td>9h às 16h</td></tr>
+                    <tr><td>Domingo</td><td>9h às 13h</td></tr>
+                    <tr><td>Segunda-feira</td><td>Fechado</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <a href="https://wa.me/5519998765432?text=Ol%C3%A1%2C%20Mimo%20Caseiro!%20Gostaria%20de%20fazer%20um%20pedido." class="btn btn-whatsapp btn-block" target="_blank" rel="noopener">
+              <svg class="icon"><use href="#icon-whatsapp"/></svg>
+              Fazer Pedido pelo WhatsApp
+            </a>
+          </div>
+
+          <div class="contact-map" data-reveal="fade" style="--reveal-delay: 120ms">
+            <div class="map-pin">
+              <svg class="icon"><use href="#icon-pin"/></svg>
+              <strong>Mimo Caseiro</strong>
+              <span>Rua das Flores, 245 – Jardim Aeroporto<br>Mogi-Mirim – SP</span>
+              <span>Entregas em Mogi-Mirim, Mogi-Guaçu e Itapira</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CTA FINAL ============ -->
+    <section class="section">
+      <div class="container">
+        <div class="cta-final" data-reveal="scale">
+          <div class="cta-final-content">
+            <h2>Pronto para Adoçar o Seu Momento?</h2>
+            <p>Peça já o seu doce favorito ou monte um kit personalizado para a sua festa, evento ou aquele mimo especial. É só uma mensagem de distância!</p>
+            <a href="https://wa.me/5519998765432?text=Ol%C3%A1%2C%20Mimo%20Caseiro!%20Vi%20o%20site%20e%20gostaria%20de%20fazer%20um%20pedido." class="btn btn-primary" target="_blank" rel="noopener">
+              <svg class="icon"><use href="#icon-whatsapp"/></svg>
+              Fazer Pedido Agora
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#inicio" class="brand">
+            <svg class="brand-mark" viewBox="0 0 40 40" aria-hidden="true"><use href="#icon-heart-mark"/></svg>
+            Mimo Caseiro
+          </a>
+          <p>Doces artesanais feitos com carinho em Mogi-Mirim, SP. Tradição de família em cada receita, adoçando momentos especiais há mais de 10 anos.</p>
+          <div class="footer-socials">
+            <a href="https://instagram.com/mimocaseiro" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg class="icon"><use href="#icon-instagram"/></svg>
+            </a>
+            <a href="https://facebook.com/mimocaseiro" target="_blank" rel="noopener" aria-label="Facebook">
+              <svg class="icon"><use href="#icon-facebook"/></svg>
+            </a>
+            <a href="https://wa.me/5519998765432" target="_blank" rel="noopener" aria-label="WhatsApp">
+              <svg class="icon"><use href="#icon-whatsapp"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navegação</h4>
+          <ul>
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#cardapio">Cardápio</a></li>
+            <li><a href="#galeria">Galeria</a></li>
+            <li><a href="#depoimentos">Depoimentos</a></li>
+            <li><a href="#contato">Contato</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Cardápio</h4>
+          <ul>
+            <li><a href="#cardapio">Bolos</a></li>
+            <li><a href="#cardapio">Tortas</a></li>
+            <li><a href="#cardapio">Docinhos &amp; Brigadeiros</a></li>
+            <li><a href="#cardapio">Kits Festa</a></li>
+            <li><a href="#cardapio">Sobremesas</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contato</h4>
+          <p><svg class="icon"><use href="#icon-pin"/></svg> Rua das Flores, 245 – Jardim Aeroporto, Mogi-Mirim – SP</p>
+          <p><svg class="icon"><use href="#icon-phone"/></svg> (19) 99876-5432</p>
+          <p><svg class="icon"><use href="#icon-mail"/></svg> contato@mimocaseiro.com.br</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Mimo Caseiro. Todos os direitos reservados.</p>
+        <p>Feito com carinho em Mogi-Mirim, SP</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============ BOTÕES FLUTUANTES ============ -->
+  <div class="fab-group">
+    <button class="fab fab-top" id="fabTop" aria-label="Voltar ao topo">
+      <svg class="icon"><use href="#icon-arrow-up"/></svg>
+    </button>
+    <a href="https://wa.me/5519998765432?text=Ol%C3%A1%2C%20Mimo%20Caseiro!%20Gostaria%20de%20fazer%20um%20pedido." class="fab fab-whatsapp" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+      <svg class="icon"><use href="#icon-whatsapp"/></svg>
+    </a>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
